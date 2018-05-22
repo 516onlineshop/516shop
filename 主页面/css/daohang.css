@@ -1,0 +1,32 @@
+nav ul {
+    float:left;
+    padding: 0 0 0 0;
+    width: 2000px;
+    height: 44px;
+    background-size:cover;
+    background-color: green;
+    list-style: none;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 20px;
+
+}
+nav ul li a {
+    float: left;
+    padding: 11px 120px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: Tahoma;
+    display: inline-block;
+    border-radius: 20px;
+    outline: none;
+
+}
+nav li a:hover {
+    background-color: #f40;
+    color: #fff;
+}

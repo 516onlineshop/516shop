@@ -1,0 +1,75 @@
+header{
+    height: 30px;
+}
+.top{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.top1{
+    float: left;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+.top2{
+    float: left;
+    position: absolute;
+    right: 50px;
+}
+.deng{
+    color: #ff2525;
+}
+.tu{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    border: solid 1px cornflowerblue;
+}
+.wenzi{
+    position: absolute;
+   left: 500px;
+    top: 200px;
+}
+.shu{
+    width: 30px;
+    height: 20px;
+}
+.qian{
+    position: absolute;
+    left: 60px;
+    top: 105px;
+    font-size: 2em;
+    color: #f54002;
+}
+.btn{
+    border: none;
+    width: 150px;
+    height: 45px;
+    color: #f54002;
+   font-size: 17px;
+   background-color: rgb(245,64,2,0.2);
+}
+.btn1{
+     border: none;
+     width: 150px;
+     height: 45px;
+     background-color: #f54002;
+    color: white;
+     font-size: 17px;
+}
+ .an{
+     height: 45px;
+     float: left;
+ }
+.zi{
+    color: red;
+}
+.xiamian {
+    position: absolute;
+    margin-left: 100px;
+    top: 400px;
+    left: -200px;
+}
+

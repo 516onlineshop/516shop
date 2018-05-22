@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>
+        516'S Online Shop
+    </title>
+    <link href='http://cdn.webfont.youziku.com/webfonts/nomal/117441/19892/5af68766f629d80d74674da2.css' rel='stylesheet' type='text/css' />
+    <link href='http://cdn.webfont.youziku.com/webfonts/nomal/117441/171/5af68b0ff629d80d74674da9.css' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="HLvideo.css" type="text/css">
+    <script type="text/javascript">
+        function fun() {
+            var x=document.getElementById("password");
+            var a="123456";
+            if (a==x.value) {
+               // alert("ok");
+                window.open("../主页面/主页面.html");
+                alert("ok");
+            }else {
+                alert("密码错误");
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <div align="center" style="height: 130px">
+        <div class="img_shopping">
+            <img  src="images/购物.png">
+        </div>
+        <div class="box2">
+            <h1 style="font-family:'hdjxyt11f82a2eed1cac1';">Wlecome To 516 Online Shop</h1>
+            <h1 style="font-family:'chenweixun-ying11f8387be01cac1';">———阿外巴巴旗下主打商城</h1>
+        </div>
+    </div>
+    <div class="boxform">
+        <div class="box4">
+           <img src="images/5.jpg">
+        </div>
+            <form class="formstyle">
+                <div class="box3">
+                    <h3>用户登陆</h3>
+                </div>
+                <input type="text" name="name" placeholder="用户名"/>
+                <input type="password" name="password"  id="password"placeholder="密码"/>
+                <input type="submit" name="load" value="登录" class="btn" onclick=" return fun()">
+                <input type="button" name="zc" value="注册" class="btn">
+            </form>
+    </div>
+</div>
+<footer>
+    <div class="box1">
+        <img src="images/团队.png"><br>
+        <h5>关于我们</h5>
+    </div>
+    <div class="footer">
+        <h4>516网上商城网是516寝室内部的网购、销售平台，它是516寝室深受欢迎的网购平台，由阿外巴巴集团在2018年5月左右创立。</h4>
+    </div>
+</footer>
+</body>
+</html>

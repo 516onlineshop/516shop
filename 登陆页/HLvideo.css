@@ -1,0 +1,99 @@
+.formstyle{
+    width: 343px;
+    height: 250px;
+    margin: auto;
+    margin-left: 100px;
+    margin-top: 100px;
+    padding-left: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #F7F7F7;
+    float: left;
+}
+.box{
+     background-color: rgba(185,255,243,0.25);
+ }
+input{
+    width: 250px;
+    height:30px;
+    border-radius: 4px;
+    display: block;
+    font-size: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.4) no-repeat 16px 16px;
+}
+
+.btn{
+    width: 294px;
+    height: 44px;
+    margin: auto;
+    margin-left: 0px;
+    background: #f0671c;
+    padding: 10.5px 21px;
+    border-radius: 6px;
+    color: white;
+    font-size: larger;
+    text-align: center;
+}
+
+.btn:active{
+    margin-top: 1px;
+    text-shadow: 0 -1px 0 #333333;
+    border: 1px solid #253737;
+    background: #f02a0f;
+    color: #ffffff;
+    border-radius: 2px;
+}
+.btn:hover{
+    text-shadow: 0 -1px 0 #333333;
+    background: #f02a0f;
+    color: #ffffff;
+}
+input[type=submit]{
+    cursor: pointer;
+}
+input[type=button]{
+    cursor: pointer;
+}
+.footer{
+    float: left;
+    margin-right: 100px;
+    width: 400px;
+}
+.box1{
+    width: 100px;
+    float: left;
+    margin-left: 510px;
+    margin-top: 10px;
+}
+h5{
+   height: 30px;
+    width: 65px;
+    margin-top: 1px;
+    text-align: center;
+}
+.boxform{
+    background-color: #ed0007   ;
+    height: 500px;
+}
+.box4{
+    float: left;
+    margin-top: 80px;
+    margin-left: 100px;
+}
+h3{
+    height: 20px;
+    margin-top: 0px;
+}
+.img_shopping{
+    float: left;
+    margin-top: 0px;
+}
+.box2{
+    padding-top: 5px;
+}
+
+

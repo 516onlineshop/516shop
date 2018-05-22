@@ -1,0 +1,529 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>516网上商城</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link href="css/xiamian.css" type="text/css" rel="stylesheet">
+	<link href="css/search.css" rel="stylesheet" type="text/css">
+    <link href="css/daohang.css" rel="stylesheet" type="text/css">
+    <link href="css/next3.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/banner.js"></script>
+    <script type="text/javascript" src="js/ad.js"></script>
+    <script type="text/javascript">
+
+
+        //商品滚动
+        $(function(){
+
+            $(".next a").click(function(){ nextscroll() });
+
+            function nextscroll(){
+
+                var vcon = $(".aui-content-box-list ");
+
+                var offset = ($(".aui-content-box-list li").width())*-1;
+
+                vcon.stop().animate({left:offset},"slow",function(){
+
+                    var firstItem = $(".aui-content-box-list ul li").first();
+
+                    vcon.find("ul").append(firstItem);
+
+                    $(this).css("left","0px");
+
+                    circle()
+
+                });
+
+            };
+
+            function circle(){
+
+                var currentItem = $(".aui-content-box-list ul li").first();
+
+                var currentIndex = currentItem.attr("index");
+
+                $(".circle li").removeClass("circle-cur");
+
+                $(".circle li").eq(currentIndex).addClass("circle-cur");
+
+            }
+
+
+            $(".prev a").click(function(){
+
+                var vcon = $(".aui-content-box-list ");
+
+                var offset = ($(".aui-content-box-list li").width()*-1);
+
+                var lastItem = $(".aui-content-box-list ul li").last();
+
+                vcon.find("ul").prepend(lastItem);
+
+                vcon.css("left",offset);
+
+                vcon.animate({left:"0px"},"slow",function(){
+
+                    circle()
+
+                })
+
+            });
+
+
+        });
+
+        //ad自动滚动
+        $(function(){
+            $(".example2").luara({width:"194",height:"275",interval:3500,selected:"seleted",deriction:"left"});
+
+        });
+
+
+    </script>
+</head>
+<body>
+<div class="box6">
+	<nav>
+		<ul>
+			<li><a href="#" title="首页" target="_self">首页</a>
+			<li><a href="#每日推荐" title="每日推荐" target="_self">每日推荐</a></li>
+			<li><a href="#潮流衣品" title="潮流衣品" target="_self">潮流衣品</a></li>
+			<li><a href="#科技前沿" title="科技前沿" target="_self">科技前沿</a></li>
+            <li><a href="#家居生活" title="家居生活" target="_self">家居生活</a></li>
+		</ul>
+	</nav>
+</div>    <!--导航部分-->
+<div class="search1">
+	<div class="search bar6">
+		<form>
+			<input type="text" placeholder="请输入您要搜索的内容...">
+			<button type="submit"> <span style="font-size: 15px;color: #F9F0DA;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搜索</span></button>
+		</form>
+	</div>
+</div>       <!--搜索部分-->
+<div class="aui-content-max">
+	<div class="aui-sale-time">
+		<a href="javascript:;" class="aui-sale-time-link">
+			<div class="aui-sale-title">限时秒杀</div>
+			<div class="aui-sale-second">FLASH DEALS</div>
+			<div class="aui-sale-icon-sd"></div>
+		</a>
+	</div>
+	<div class="aui-content-box">
+		<div class="prev">
+			<a href="javascript:void(0)">
+				<img src="img/prev.png" alt="">
+			</a>
+		</div>
+		<div class="aui-content-box-ovf">
+			<div class="aui-content-box-list">
+				<ul>
+					<li>
+						<a href="#">
+							<div class="aui-content-item-img">
+								<img src="img/pd1.jpg" alt="">
+							</div>
+							<p class="aui-content-item-name">家杰 洗刷刷 免手洗平板拖把拖布 家用擦木地板瓷砖旋转墩布 洗脱合一自刷洗拖把桶 3块布 JJ-A18</p>
+							<div class="aui-content-price">
+								<span class="aui-content-price-new">
+									<i>¥</i>
+									<span>109</span>
+								</span>
+								<span class="aui-content-price-origin">
+									<i>¥</i>
+									<span>229</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="aui-content-item-img">
+								<img src="img/pd2.jpg" alt="">
+							</div>
+							<p class="aui-content-item-name">魅族 PRO 6 Plus 4GB+64GB 公开版 香槟金 移动联通4G手机 双卡双待</p>
+							<div class="aui-content-price">
+								<span class="aui-content-price-new">
+									<i>¥</i>
+									<span>2499.99</span>
+								</span>
+								<span class="aui-content-price-origin">
+									<i>¥</i>
+									<span>2999.99</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="aui-content-item-img">
+								<img src="img/pd3.jpg" alt="">
+							</div>
+							<p class="aui-content-item-name">小米MIX2 全面屏游戏手机 8GB+128GB 全陶瓷尊享版 黑色 全网通4G手机 双卡双待</p>
+							<div class="aui-content-price">
+								<span class="aui-content-price-new">
+									<i>¥</i>
+									<span>2899.99</span>
+								</span>
+								<span class="aui-content-price-origin">
+									<i>¥</i>
+									<span>3199.99</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="aui-content-item-img">
+								<img src="img/pd4.jpg" alt="">
+							</div>
+							<p class="aui-content-item-name">双面屏阅读大屏手机 4+64G黑色 4G全网通 双卡双待手机</p>
+							<div class="aui-content-price">
+								<span class="aui-content-price-new">
+									<i>¥</i>
+									<span>1499.00</span>
+								</span>
+								<span class="aui-content-price-origin">
+									<i>¥</i>
+									<span>1999.00</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="aui-content-item-img">
+								<img src="img/pd5.jpg" alt="">
+							</div>
+							<p class="aui-content-item-name">美国进口 有机牧场典藏系列 特仑苏有机纯牛奶2箱</p>
+							<div class="aui-content-price">
+								<span class="aui-content-price-new">
+									<i>¥</i>
+									<span>119.90</span>
+								</span>
+								<span class="aui-content-price-origin">
+									<i>¥</i>
+									<span>159.90</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="aui-content-item-img">
+								<img src="img/pd6.jpg" alt="">
+							</div>
+							<p class="aui-content-item-name">依立 AYB10-1紫砂电饭煲电炖锅1L爱婴煲电砂锅bb煲炖汤煲粥煲仔饭</p>
+							<div class="aui-content-price">
+								<span class="aui-content-price-new">
+									<i>¥</i>
+									<span>288.00</span>
+								</span>
+								<span class="aui-content-price-origin">
+									<i>¥</i>
+									<span>328.00</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="aui-content-item-img">
+								<img src="img/pd7.jpg" alt="">
+							</div>
+							<p class="aui-content-item-name">雀巢能恩AL110*400g罐装 无乳糖配方婴幼儿营养牛奶粉*2</p>
+							<div class="aui-content-price">
+								<span class="aui-content-price-new">
+									<i>¥</i>
+									<span>89.90</span>
+								</span>
+								<span class="aui-content-price-origin">
+									<i>¥</i>
+									<span>149.90</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="aui-content-item-img">
+								<img src="img/pd8.jpg" alt="">
+							</div>
+							<p class="aui-content-item-name">Canon/佳能EOS 1300D单反相机 入门级 高清数码摄影 旅游18-55mm</p>
+							<div class="aui-content-price">
+								<span class="aui-content-price-new">
+									<i>¥</i>
+									<span>2099.00</span>
+								</span>
+								<span class="aui-content-price-origin">
+									<i>¥</i>
+									<span>2399.00</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="aui-content-item-img">
+								<img src="img/pd9.jpg" alt="">
+							</div>
+							<p class="aui-content-item-name">新概念手表创意黑科技电子表男女学生智能运动多功能led触屏炫酷</p>
+							<div class="aui-content-price">
+								<span class="aui-content-price-new">
+									<i>¥</i>
+									<span>99.99</span>
+								</span>
+								<span class="aui-content-price-origin">
+									<i>¥</i>
+									<span>149.99</span>
+								</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="next">
+			<a href="javascript:void(0)">
+				<img src="img/next.png" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="aui-small-ad">
+		<div class="example2">
+			<ul>
+				<li>
+					<img src="img/ad2.jpg" alt="2">
+				</li>
+				<li>
+					<img src="img/ad1.jpg" alt="1">
+				</li>
+				<li>
+					<img src="img/ad3.jpg" alt="3">
+				</li>
+			</ul>
+			<ol>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+	</div>
+</div>         <!--图片轮播部分-->
+<div>
+	<div class="border-radius" id="每日推荐">每日推荐</div>
+	<div class="main">
+		<div class="view">
+			<img src="imags/1.jpg" alt="">
+			<div class="hover">
+				<h3>NIKE男鞋</h3>
+				<p>NIKE TESSEN 男子运动鞋 AA2160</p>
+			</div>
+		</div>
+		<div class="view">
+			<img src="imags/2.jpg" alt="">
+			<div class="hover">
+				<h3>NIKE</h3>
+				<p> AIR VAPORMAX FLYKNIT 2 男子VP2.0大气垫跑步鞋</p>
+			</div>
+		</div>
+		<div class="view">
+			<img src="imags/3.jpg" alt="">
+			<div class="hover">
+				<h3>JackJones</h3>
+				<p>杰克琼斯夏男字母刺绣棒球帽鸭舌帽MLMR</p>
+			</div>
+		</div>
+		<div class="view">
+			<img src="imags/4.jpg" alt="">
+			<div class="hover">
+				<h3>DanielWellington</h3>
+				<p>手镯 饰品简约 欧美百搭DW男女士手镯</p>
+			</div>
+		</div>
+		<div class="view">
+			<img src="imags/5.jpg" alt="">
+			<div class="hover">
+				<h3>Lock＆Lock</h3>
+				<p>乐扣乐扣耐热玻璃水杯防摔便携茶杯</p>
+			</div>
+		</div>
+		<div class="view">
+			<img src="imags/6.jpg" alt="">
+			<div class="hover">
+				<h3>LEGO</h3>
+				<p>乐高经典创意系列创意变形金刚</p>
+			</div>
+		</div>
+		<div class="view">
+			<img src="imags/7.jpg" alt="">
+			<div class="hover">
+				<h3>NIKE</h3>
+				<p>耐克双肩包男包Air Max气垫书包</p>
+			</div>
+		</div>
+		<div class="view">
+			<img src="imags/8.jpg" alt="">
+			<div class="hover">
+				<h3>NewBlance</h3>
+				<p>NewBlance 经典574Red 红色运动鞋</p>
+			</div>
+		</div>
+	</div>
+	</div> <!--每日推荐部分-->
+<div class="items">
+    <div>
+        <div class="border-radius" id="潮流衣品">潮流衣品</div>
+    </div>
+    <div class="box7">
+        <div class="item">
+            <div class="pic">
+                <a href="../详细页/衣服.html"><img src="../详细页/images/1.jpg_.webp" alt=""></a>
+            </div>
+            <div class="desc">
+                <div class="detail">美特斯邦威短袖男衬衫<br><i>￥108.00</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="pic">
+                <img src="imags/style1.jpg" alt="">
+            </div>
+            <div class="desc">
+                <div class="detail">薄荷绿沙滩情侣夏装<br><i>￥299.00</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="pic">
+                <img src="imags/style2.jpg" alt="">
+            </div>
+            <div class="desc">
+                <div class="detail">夏季爆款潮流嘻哈卫衣<br><i>￥168.00</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="pic">
+                <img src="imags/style3.jpg" alt="">
+            </div>
+            <div class="desc">
+                <div class="detail">Suitsupply夏季短袖<br><i>￥499.00</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!--潮流衣品-->
+<div class="items">
+    <div>
+        <div class="border-radius" id="科技前沿">科技前沿</div>
+    </div>
+    <div class="box7">
+        <div class="item">
+            <div class="pic">
+                <a href="../详细页/科技前沿.html"><img src="imags/科技.jpg" alt=""></a>
+            </div>
+            <div class="desc">
+                <div class="detail">Huawei/华为P10<br><i>￥3299.00</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="pic">
+                <img src="imags/keji2.jpg" alt="">
+            </div>
+            <div class="desc">
+                <div class="detail">智能无线wifi网络摄像头<br><i>￥149.00</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="pic">
+                <img src="imags/keji3.jpg" alt="">
+            </div>
+            <div class="desc">
+                <div class="detail">夜间专用激光发射器<br><i>￥288.00</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="pic">
+                <img src="imags/keji1.jpg" alt="">
+            </div>
+            <div class="desc">
+                <div class="detail">CASIO男士石英表<br><i>￥799.00</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  <!--科技前沿-->
+<div class="items">
+    <div>
+        <div class="border-radius" id="家居生活">家居生活</div>
+    </div>
+    <div class="box7">
+        <div class="item">
+            <div class="pic">
+                <a href="../详细页/家具.html"><img src="imags/jiaju.jpg" alt=""></a>
+            </div>
+            <div class="desc">
+                <div class="detail">家用古朴典雅实用木柜<br><i>￥128.00</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="pic">
+                <img src="imags/jiaju1.jpg" alt="">
+            </div>
+            <div class="desc">
+                <div class="detail">黑色花纹沙发木椅<br><i>￥79.50</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="pic">
+                <img src="imags/jiaju2.jpg" alt="">
+            </div>
+            <div class="desc">
+                <div class="detail">可旋转白色高档老板椅<br><i>￥199.00</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="pic">
+                <img src="imags/jiaju3.jpg" alt="">
+            </div>
+            <div class="desc">
+                <div class="detail">复古带镜典雅宽大木柜<br><i>￥318.00</i>
+                    <a href="#" ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  <!--家具生活-->
+</body>
+<footer>
+    <div class="services">品质保障|七天无理由退换货|特色服务体验 </div>
+</footer>
+</html>
